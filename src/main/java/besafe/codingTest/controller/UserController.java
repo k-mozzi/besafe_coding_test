@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 /*
- * testValue: VALUES ('besafe', 'tester', '김경모', NULL, 'N', NULL, NULL, NOW(), NULL);
+ * testValue: VALUES ('xxx', 'xxx', 'xxx', 1, 'N', NULL, NULL, NOW(), NULL);
  * */
 @Data
 @RestController

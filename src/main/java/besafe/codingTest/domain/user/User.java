@@ -10,7 +10,7 @@ import java.util.Date;
  * `lastRefTokenTime` '리프레시토큰정보',
  * `mDate` 수정일자',
  * `cDate` '생성일자',
- * testValue: VALUES ('besafe', 'tester', '김경모', NULL, 'N', NULL, NULL, NOW(), NULL);
+ * testValue: VALUES ('xxx', 'xxx', 'xxx', 1, 'N', NULL, NULL, NOW(), NULL);
  * */
 @Data
 public class User {
