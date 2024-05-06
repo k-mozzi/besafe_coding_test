@@ -5,11 +5,11 @@ import lombok.Data;
 import java.util.Date;
 
 /*
- * `utType` '회원 종류',
- * `useYn` '탈퇴여부',
- * `lastRefTokenTime` '리프레시토큰정보',
- * `mDate` 수정일자',
- * `cDate` '생성일자',
+ * `utType` '회원 종류'
+ * `useYn` '탈퇴여부'
+ * `lastRefTokenTime` '리프레시토큰정보'
+ * `mDate` 수정일자'
+ * `cDate` '생성일자'
  * testValue: VALUES ('xxx', 'xxx', 'xxx', 1, 'N', NULL, NULL, NOW(), NULL);
  * */
 @Data
@@ -24,9 +24,4 @@ public class User {
     private Date mDate;
     private Date cDate;
     private String profile;
-
-    public User(String email, String password) {
-        this.email = email;
-        this.password = password;
-    }
 }
