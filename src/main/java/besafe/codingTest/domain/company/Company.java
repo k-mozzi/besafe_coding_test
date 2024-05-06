@@ -18,7 +18,7 @@ import java.util.Date;
 * `cDate` '생성일'
 * `mDate` '수정일'
 * `mUser` '수정자'
-* `categortCd` '카테고리코드': ["1":"OUTER", "2":"PANTS", "3":"DRESS", "4":"SHOES", "5":"BAG"]
+* `categoryCd` '카테고리코드': ["1":"OUTER", "2":"PANTS", "3":"DRESS", "4":"SHOES", "5":"BAG"]
 * */
 @Data
 public class Company {
