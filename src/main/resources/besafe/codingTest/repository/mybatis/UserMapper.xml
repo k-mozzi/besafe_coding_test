@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="besafe.codingTest.repository.mybatis.UserMapper">
     <select id="findByEmail" resultType="User">
-        select * from user
-        where email = #{email}
+        SELECT * FROM User
+        WHERE email = #{email}
     </select>
 </mapper>
