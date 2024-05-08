@@ -18,9 +18,9 @@ public class HomepageController {
     private final HomepageService homepageService;
 
     /*
-    * 최근 10일 동안 브랜딩 계약이 많은 상위 20개 업체 리스트 출력 메서드
-    * Postman Body에 offset 입력
-    * */
+     * 최근 10일 동안 브랜딩 계약이 많은 상위 20개 업체 리스트 출력 메서드
+     * Postman URI에 offset 입력
+     * */
     @GetMapping("/general/main")
     public List<Map<String, Object>> getTopRatedCompanies(
             @RequestParam(name = "offset", defaultValue = "0") int offset) {
@@ -29,7 +29,7 @@ public class HomepageController {
 
     /*
      * 최근 10일 동안 브랜딩 신청이 많이 들어오고 아직 브랜딩 계약을 하지 않은 상위 20개 상품 리스트 출력 메서드
-     * Postman Body에 offset 입력
+     * Postman URI에 offset 입력
      * */
     @GetMapping("/company/main")
     public List<Map<String, Object>> getTopRatedProducts(

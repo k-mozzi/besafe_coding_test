@@ -3,8 +3,33 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="besafe.codingTest.repository.mybatis.HomepageMapper">
     <select id="findByNumOfSale" parameterType="int" resultType="java.util.Map">
+        SELECT c.cId,
+               c.profile,
+               c.name,
+               c.GPA,
+               c.numOfSales,
+               c.info
+        FROM Company c
+        JOIN Purchase p ON c.cId = p.cId
+        WHERE p.cDate >= DATE_SUB(CURDATE(), INTERVAL 10 DAY)
+        AND cUser IS NOT NULL
+        GROUP BY c.cId
+        ORDER BY COUNT(p.cId) DESC LIMIT #{offset}, 20;
     </select>
 
     <select id="findByNumOfRequest" parameterType="int" resultType="java.util.Map">
+        SELECT p.pId,
+               p.title,
+               p.price,
+               p.thumb1     AS Thumb,
+               p.categoryCd AS category,
+               p.payType
+        FROM Product p
+        WHERE pId IN (
+            SELECT pId
+            FROM Purchase
+            WHERE cDate >= DATE_SUB(CURDATE(), INTERVAL 10 DAY)
+            AND cUser IS NULL)
+        ORDER BY (SELECT COUNT(*) FROM Purchase WHERE pId = p.pId) DESC LIMIT #{offset}, 20;
     </select>
 </mapper>
