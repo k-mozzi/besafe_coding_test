@@ -1,9 +1,7 @@
 package besafe.codingTest.service;
 
-import besafe.codingTest.domain.user.User;
-
-import java.util.Optional;
+import besafe.codingTest.jwt.JwtToken;
 
 public interface UserService {
-    Optional<User> findByEmail(String email);
+    JwtToken login(String email, String password);
 }
