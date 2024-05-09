@@ -26,7 +26,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     // 해당하는 User의 데이터가 존재한다면 UserDetails 객체로 만들어서 return
     private UserDetails createUserDetails(besafe.codingTest.domain.user.User user) {
         return User.builder()
-                .username(user.getEmail())
+                .username(String.valueOf(user.getUId()))
                 .password(passwordEncoder.encode(user.getPassword()))
                 .build();
     }
