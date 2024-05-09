@@ -1,6 +1,6 @@
 package besafe.codingTest.controller;
 
-import besafe.codingTest.service.ProductService;
+import besafe.codingTest.service.ProductServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +17,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class ProductController {
 
-    private final ProductService productService;
+    private final ProductServiceImpl productService;
 
     @GetMapping("/recommendation")
     public ResponseEntity<List<Map<String, Object>>> getProductsWithRecommendations(@RequestParam String uId) {

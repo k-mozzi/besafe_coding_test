@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Param;
 
 @Mapper
 public interface PurchaseMapper {
-    boolean existsContractForProduct(@Param("pId") int pId, @Param("uId") int uId);
+    boolean existsContractForProduct(@Param("pId") int pId);
 }
